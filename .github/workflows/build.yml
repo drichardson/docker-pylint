@@ -42,5 +42,4 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args:
-            - pylint_version=2.14.3
+          build-args: pylint_version=2.14.3
