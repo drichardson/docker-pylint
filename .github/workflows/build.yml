@@ -30,7 +30,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            drichardson/docker-pylint
+            ghcr.io/drichardson/docker-pylint
           tags: |
             type=ref,enable=true,event=branch
             type=ref,enable=true,event=pr
