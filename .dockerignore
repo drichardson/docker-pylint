@@ -2,4 +2,4 @@
 *
 
 # Allow files and directories
-!pylint_version.txt
+!requirements.txt
