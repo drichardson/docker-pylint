@@ -36,14 +36,15 @@ jobs:
           images: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=ref,event=branch
-            type=ref,event=pr
-            type=ref,event=tag
+            type=ref,enable=true,event=branch
+            type=ref,enable=true,event=pr
+            type=ref,enable=true,event=tag
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=raw,value=pylint_version-${{ env.PYLINT_VERSION }}
           labels: |
             org.opencontainers.image.title=${{ env.IMAGE_NAME }}
+            org.opencontainers.image.description=pylint ${{ env.PYLINT_VERSION }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
