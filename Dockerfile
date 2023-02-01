@@ -4,6 +4,7 @@ FROM python:alpine3.16 as base
 FROM base as builder
 
 WORKDIR /usr/app
+RUN apk add git
 RUN python -m venv /usr/app/venv
 ENV PATH="/usr/app/venv/bin:$PATH"
 
