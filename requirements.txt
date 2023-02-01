@@ -1,2 +1,1 @@
-# pylint==2.16.0
 git+https://github.com/PyCQA/pylint@v2.16.0b1#egg=pylint

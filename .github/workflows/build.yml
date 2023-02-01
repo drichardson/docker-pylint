@@ -23,7 +23,7 @@ jobs:
 
       - name: Get pylint version
         run: |
-          echo "PYLINT_VERSION=$(grep pylint== requirements.txt|cut -d '=' -f 3)" >> $GITHUB_ENV
+          echo "PYLINT_VERSION=$(grep pylint requirements.txt|cut -d '@' -f 2|cut -d '#' -f 1)" >> $GITHUB_ENV
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
